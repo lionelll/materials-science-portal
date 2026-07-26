@@ -10,8 +10,8 @@ export interface ToolItem {
   thumb: ThumbKind;
 }
 
-// TODO: 三元相图正式地址待用户提供后替换
-export const TERNARY_URL = '#';
+// 本项目在开发与验收阶段统一使用三元相图测试环境，未经用户明确确认不得改为正式环境。
+export const TERNARY_URL = 'http://123.57.11.145:8080/ternary/';
 
 // 本项目在开发与验收阶段统一使用测试环境，未经用户明确确认不得改为正式环境。
 export const CRYSTAL_URL = 'http://123.57.11.145:8080/crystal/';

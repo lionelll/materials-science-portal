@@ -18,8 +18,8 @@ npm run preview
 1. 在 `src/data/tools.ts` 的 `tools` 数组中追加配置。
 2. 如需新的缩略图类型，在 `ThumbKind` 中增加类型，并在 `src/components/ToolThumb.tsx` 中增加对应的内联 SVG 分支。
 
-三元相图正式地址确认后，只需替换 `src/data/tools.ts` 中的 `TERNARY_URL`。
+三元相图测试地址为 `http://123.57.11.145:8080/ternary/`，入口配置位于 `src/data/tools.ts` 中的 `TERNARY_URL`。
 
 ## 测试环境部署
 
-`dev` 分支通过 GitHub Actions 自动部署到 `http://123.57.11.145:8080/`，服务器目录为 `/var/www/materials-portal-dev`。晶体结构测试站位于同一服务的 `/crystal/` 子路径。
+`dev` 分支通过 GitHub Actions 自动部署到 `http://123.57.11.145:8080/`，服务器目录为 `/var/www/materials-portal-dev`。晶体结构和三元相图测试站分别位于同一服务的 `/crystal/` 与 `/ternary/` 子路径。
