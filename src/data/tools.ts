@@ -15,7 +15,7 @@ export interface ToolItem {
 export const TERNARY_URL = '#';
 
 // 本项目在开发与验收阶段统一使用测试环境，未经用户明确确认不得改为正式环境。
-export const CRYSTAL_URL = 'http://123.57.11.145:8080/';
+export const CRYSTAL_URL = 'http://123.57.11.145:8080/crystal/';
 
 export const tools: ToolItem[] = [
   {
