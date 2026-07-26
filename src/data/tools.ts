@@ -8,7 +8,6 @@ export interface ToolItem {
   status: ToolStatus;
   href?: string;
   thumb: ThumbKind;
-  featured?: boolean;
 }
 
 // TODO: 三元相图正式地址待用户提供后替换
@@ -25,7 +24,6 @@ export const tools: ToolItem[] = [
     status: 'live',
     href: CRYSTAL_URL,
     thumb: 'crystal',
-    featured: true,
   },
   {
     id: 'ternary-phase',

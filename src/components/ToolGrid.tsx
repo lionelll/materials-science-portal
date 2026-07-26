@@ -9,6 +9,7 @@ export function ToolGrid() {
           <ToolCard key={tool.id} tool={tool} />
         ))}
       </div>
+      <p className="tools-development-note">更多功能还在开发</p>
     </section>
   );
 }

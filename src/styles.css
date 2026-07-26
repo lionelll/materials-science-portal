@@ -349,31 +349,11 @@ svg {
   box-shadow: 0 0 0 1px rgba(21, 136, 255, .5), 0 16px 40px rgba(9, 106, 220, .28);
 }
 
-.tool-card-featured {
-  border-color: rgba(21, 136, 255, .9);
-  background: linear-gradient(180deg, rgba(21, 46, 72, .88), rgba(10, 27, 44, .86));
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .07),
-    0 0 0 1px rgba(21, 136, 255, .45),
-    0 16px 42px rgba(9, 106, 220, .28),
-    inset 0 0 42px rgba(21, 136, 255, .055);
-}
-
-.tool-card-featured:hover,
-.tool-card-featured:focus-visible {
-  border-color: #51adff;
-  box-shadow:
-    0 0 0 1px rgba(60, 164, 255, .82),
-    0 18px 48px rgba(9, 106, 220, .42),
-    inset 0 0 48px rgba(21, 136, 255, .08);
-}
-
 .tool-card-soon {
   opacity: .55;
   cursor: default;
 }
 
-.featured-badge,
 .soon-badge {
   position: absolute;
   z-index: 2;
@@ -382,13 +362,6 @@ svg {
   font-size: 12px;
   line-height: 1;
   border-radius: 4px;
-}
-
-.featured-badge {
-  left: 12px;
-  color: #fff;
-  background: linear-gradient(180deg, #168dff, #0865dc);
-  box-shadow: 0 0 16px rgba(21, 136, 255, .45);
 }
 
 .soon-badge {
@@ -466,6 +439,21 @@ svg {
   border-color: rgba(139, 164, 194, .2);
   background: rgba(255, 255, 255, .07);
   box-shadow: none;
+}
+
+.tools-development-note {
+  width: max-content;
+  max-width: 100%;
+  margin: 20px auto 0;
+  padding: 7px 16px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+  letter-spacing: .08em;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(15, 28, 42, .72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .035);
 }
 
 .feature-strip {

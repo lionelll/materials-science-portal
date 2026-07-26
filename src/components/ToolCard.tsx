@@ -9,7 +9,6 @@ interface ToolCardProps {
 function CardBody({ tool }: ToolCardProps) {
   return (
     <>
-      {tool.featured && <span className="featured-badge">推荐</span>}
       {tool.status === 'soon' && <span className="soon-badge">即将上线</span>}
       <div className="tool-thumb-wrap">
         <ToolThumb kind={tool.thumb} dimmed={tool.status === 'soon'} />
@@ -34,13 +33,15 @@ function CardBody({ tool }: ToolCardProps) {
 }
 
 export function ToolCard({ tool }: ToolCardProps) {
-  const classes = ['tool-card', `tool-card-${tool.status}`, tool.featured ? 'tool-card-featured' : '']
-    .filter(Boolean)
-    .join(' ');
+  const classes = `tool-card tool-card-${tool.status}`;
 
   if (tool.status === 'live') {
     const holdPlaceholder = (event: MouseEvent<HTMLAnchorElement>) => {
-      if (tool.href === '#') event.preventDefault();
+      if (tool.href === '#') {
+        event.preventDefault();
+      }
+
+      event.currentTarget.blur();
     };
 
     return (
