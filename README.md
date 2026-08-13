@@ -20,6 +20,8 @@ npm run preview
 
 三元相图测试地址为 `http://123.57.11.145:8080/ternary/`，入口配置位于 `src/data/tools.ts` 中的 `TERNARY_URL`。
 
+二元相图测试地址为 `http://123.57.11.145:8080/binary/`，入口配置位于 `src/data/tools.ts` 中的 `BINARY_URL`。
+
 ## 测试环境部署
 
-`dev` 分支通过 GitHub Actions 自动部署到 `http://123.57.11.145:8080/`，服务器目录为 `/var/www/materials-portal-dev`。晶体结构和三元相图测试站分别位于同一服务的 `/crystal/` 与 `/ternary/` 子路径。
+`dev` 分支通过 GitHub Actions 自动部署到 `http://123.57.11.145:8080/`，服务器目录为 `/var/www/materials-portal-dev`。晶体结构、三元相图和二元相图测试站分别位于同一服务的 `/crystal/`、`/ternary/` 与 `/binary/` 子路径。

@@ -13,6 +13,9 @@ export interface ToolItem {
 // 本项目在开发与验收阶段统一使用三元相图测试环境，未经用户明确确认不得改为正式环境。
 export const TERNARY_URL = 'http://123.57.11.145:8080/ternary/';
 
+// 本项目在开发与验收阶段统一使用二元相图测试环境，未经用户明确确认不得改为正式环境。
+export const BINARY_URL = 'http://123.57.11.145:8080/binary/';
+
 // 本项目在开发与验收阶段统一使用测试环境，未经用户明确确认不得改为正式环境。
 export const CRYSTAL_URL = 'http://123.57.11.145:8080/crystal/';
 
@@ -34,10 +37,11 @@ export const tools: ToolItem[] = [
     thumb: 'ternary',
   },
   {
-    id: 'iron-carbon',
-    name: '铁碳相图 (Fe-Fe₃C)',
-    desc: '经典铁碳相图可视化与相区分析',
-    status: 'soon',
+    id: 'binary-phase',
+    name: '二元相图',
+    desc: '探索二元体系的相平衡与相区变化',
+    status: 'live',
+    href: BINARY_URL,
     thumb: 'fec',
   },
   {
