@@ -22,6 +22,8 @@ npm run preview
 
 二元相图测试地址为 `http://123.57.11.145:8080/binary/`，入口配置位于 `src/data/tools.ts` 中的 `BINARY_URL`。
 
+晶体缺陷可视化实验室目前展示为“即将上线”，首期为位错专题，卡片没有跳转地址。`/defects/` 仅是本地联调的暂定路径；待晶体缺陷项目负责人交付可访问的测试页面、测试环境部署负责人登记路由，并确认最终测试地址后，再在 `src/data/tools.ts` 中配置入口并切换为 `live`。
+
 ## 测试环境部署
 
 `dev` 分支通过 GitHub Actions 自动部署到 `http://123.57.11.145:8080/`，服务器目录为 `/var/www/materials-portal-dev`。晶体结构、三元相图和二元相图测试站分别位于同一服务的 `/crystal/`、`/ternary/` 与 `/binary/` 子路径。

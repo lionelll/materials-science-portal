@@ -128,6 +128,46 @@ function IronCarbonThumb() {
   );
 }
 
+function DefectsThumb() {
+  const upperRows = [42, 82, 122];
+  const lowerRows = [162, 202];
+  const upperColumns = [54, 102, 150, 198, 246];
+  const lowerColumns = [54, 102, 198, 246];
+
+  return (
+    <>
+      <defs>
+        <radialGradient id="defects-node" cx="30%" cy="25%" r="72%">
+          <stop stopColor="#b9e5ff" />
+          <stop offset=".35" stopColor="#50b3ff" />
+          <stop offset="1" stopColor="#1261a9" />
+        </radialGradient>
+        <radialGradient id="defects-core">
+          <stop stopColor="#ffb35a" stopOpacity=".42" />
+          <stop offset="1" stopColor="#ffb35a" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <circle cx="150" cy="122" r="45" fill="url(#defects-core)" />
+      <g fill="none" stroke="#76bfff" strokeOpacity=".55" strokeWidth="1.4">
+        {upperRows.map((y) => <path d={`M54 ${y}H246`} key={`upper-${y}`} />)}
+        {lowerRows.map((y) => <path d={`M54 ${y}H102M198 ${y}H246`} key={`lower-${y}`} />)}
+        {[54, 102, 198, 246].map((x) => <path d={`M${x} 42V202`} key={`column-${x}`} />)}
+        <path d="M102 162Q150 139 198 162M102 202Q150 181 198 202" />
+      </g>
+      <path d="M150 42V122" fill="none" stroke="#ffad57" strokeWidth="2.3" strokeLinecap="round" />
+      <g fill="url(#defects-node)" stroke="#b4dfff" strokeWidth=".7">
+        {upperRows.flatMap((y) => upperColumns.map((x) => (
+          <circle cx={x} cy={y} r="6.5" key={`${x}-${y}`} />
+        )))}
+        {lowerRows.flatMap((y) => lowerColumns.map((x) => (
+          <circle cx={x} cy={y} r="6.5" key={`${x}-${y}`} />
+        )))}
+      </g>
+      <circle cx="150" cy="122" r="9" fill="#ffad57" stroke="#ffe1a8" strokeWidth="1.2" />
+    </>
+  );
+}
+
 function PlaneThumb() {
   return (
     <>
@@ -229,6 +269,7 @@ export function ToolThumb({ kind, dimmed = false }: ToolThumbProps) {
     crystal: <CrystalThumb />,
     ternary: <TernaryThumb />,
     fec: <IronCarbonThumb />,
+    defects: <DefectsThumb />,
     plane: <PlaneThumb />,
     calc: <CalcThumb />,
     xrd: <XrdThumb />,

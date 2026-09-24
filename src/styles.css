@@ -319,6 +319,11 @@ svg {
   gap: 20px;
 }
 
+.tool-grid-labs {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 20px;
+}
+
 .tool-card {
   position: relative;
   min-width: 0;
@@ -561,6 +566,12 @@ main > .feature-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .tool-grid-tools > :last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 10px);
+    justify-self: center;
+  }
+
   .tool-copy h2 {
     font-size: 24px;
   }
@@ -604,6 +615,11 @@ main > .feature-strip {
 
   .tool-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tool-grid-tools > :last-child {
+    grid-column: auto;
+    width: auto;
   }
 
   .tool-card {
